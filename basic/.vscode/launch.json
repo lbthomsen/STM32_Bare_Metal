@@ -1,0 +1,20 @@
+{
+    "name": "BMP attach",
+    "cwd": "${workspaceRoot}",
+    "executable": "${workspaceRoot}/main.elf",
+    "request": "attach",
+    "type": "cortex-debug",
+    "servertype": "bmp",
+    "interface": "swd",
+    "device": "STM32L432",
+    "BMPGDBSerialPort": "/dev/ttyACM0",
+    "runToMain": false,
+    "preLaunchCommands": [
+        "set async-remote false",
+        "set remote-timeout 20"
+    ],
+    "preRestartCommands": [
+        "enable breakpoint",
+        "break main"
+    ]
+}

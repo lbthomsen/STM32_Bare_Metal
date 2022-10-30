@@ -38,6 +38,7 @@ LFLAGS += -T$(LSCRIPT)
 
 # Debug
 
+
 AS_SRC += ./core.S
 
 OBJS =  $(AS_SRC:.S=.o)
@@ -51,8 +52,12 @@ all: $(TARGET).elf
 $(TARGET).elf: $(OBJS)
 	$(CC) $^ $(LFLAGS) -o $@
 
-.PHONY: clean
+.PHONY: clean debug
+
 clean:
 	rm -f $(OBJS)
 	rm -f $(TARGET).elf
 	
+debug: $(TARGET).elf
+	$(GDB) $(TARGET).elf
+

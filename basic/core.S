@@ -18,6 +18,7 @@
 vtable:
     .word _estack
     .word reset_handler
+    
 .size vtable, .-vtable
 
 /*
@@ -40,4 +41,5 @@ reset_handler:
     ADDS r0, r0, #1
     // Loop back.
     B    main_loop
+
 .size reset_handler, .-reset_handler

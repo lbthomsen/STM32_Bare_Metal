@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/lth/src/STM32_Bare_Metal/basic",
+            "binaryPath": "/home/lth/src/STM32_Bare_Metal/basic/main.elf",
+            "binaryArgs": []
+        }
+    ]
+}
