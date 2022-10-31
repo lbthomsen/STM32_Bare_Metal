@@ -36,9 +36,6 @@ LFLAGS += -lgcc
 #LFLAGS += -static
 LFLAGS += -T$(LSCRIPT)
 
-# Debug
-
-
 AS_SRC += ./core.S
 
 OBJS =  $(AS_SRC:.S=.o)
