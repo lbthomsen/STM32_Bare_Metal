@@ -9,10 +9,11 @@
             "request": "attach",
             "name": "Debug (BMP)",
             "servertype": "bmp",
+            "interface": "swd", 
             "BMPGDBSerialPort": "/dev/ttyACM0",
             "cwd": "${workspaceFolder}",
-            "runToEntryPoint": "Reset_Handler",
-            "executable": "main.elf",
+            "runToEntryPoint": "Reset_Handler", 
+            "executable": "${workspaceFolder}/main.elf",
             "device": "STM32L43x"
         }
     ]
